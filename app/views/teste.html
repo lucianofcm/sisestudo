@@ -1,0 +1,44 @@
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Aprenda AngularJS - Formulário de Pedido</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,700" rel="stylesheet">
+
+	<!-- Arquivo CSS principal -->
+	<link rel="stylesheet" href="styles/main.css">
+	
+  	<script src="/scripts/controllers/teste.js"></script>
+  	<script src="/scripts/app.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+
+<div ng-init="checked=true">
+  <label>
+    <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Inserir nome
+  </label>
+  <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+   <div ng-controller="testeCtrl">
+  Seu nome:
+  <div class="row">
+  <div class="col-lg-6">
+  	<div class="input-group">
+         <input ng-model="username" type="text" class="form-control" placeholder="Digite seu nome">
+      <span class="input-group-btn">
+        <button ng-click="sayHello()" class="btn btn-default" type="button">Enviar!</button>
+      </span>
+    </div>
+ 	</div>
+ </div>
+  <hr>
+  {{greeting}}
+</div>
+  </div>
+
+</body>
+</html>
